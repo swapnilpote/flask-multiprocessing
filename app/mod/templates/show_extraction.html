@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{url_for('aml.static', filename='css/bootstrap.min.css')}}" rel="stylesheet">
+    <title>AML Welcome Page</title>
+</head>
+
+<body>
+    <main>
+        <div class="container py-4">
+            <header class="pb-3 mb-4 border-bottom">
+                <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+                    <span class="fs-4">Mizuho AML System</span>
+                </a>
+            </header>
+
+            <div class="row align-items-md-stretch">
+                <div class="col-md-6">
+                    <div class="h-100 p-5 bg-light rounded-3">
+                        <h2>Extracted data from pdf</h2>
+                        <p>{{ unique_id }}</p>
+                        <form action="#" method="POST">
+                            <div class="form-group row">
+                                <label for="staticEmail" class="col-sm-4 col-form-label">port_of_loading</label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="staticEmail" class="col-sm-4 col-form-label">port_of_discharge</label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="staticEmail" class="col-sm-4 col-form-label">port_of_receipt</label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="staticEmail" class="col-sm-4 col-form-label">port_of_delivery</label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="staticEmail" class="col-sm-4 col-form-label">exporter_name</label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="staticEmail" class="col-sm-4 col-form-label">exporter_location</label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="staticEmail" class="col-sm-4 col-form-label">consignee_name</label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="staticEmail" class="col-sm-4 col-form-label">consignee_location</label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="staticEmail" class="col-sm-4 col-form-label">notify_name</label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="staticEmail" class="col-sm-4 col-form-label">notify_location</label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="staticEmail" class="col-sm-4 col-form-label">buyer_name</label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="staticEmail" class="col-sm-4 col-form-label">buyer_location</label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="staticEmail" class="col-sm-4 col-form-label">other_locations</label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="staticEmail" class="col-sm-4 col-form-label">other_org_names</label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="staticEmail" class="col-sm-4 col-form-label">product</label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="staticEmail" class="col-sm-4 col-form-label">person</label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="staticEmail" class="col-sm-4 col-form-label">vessel</label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="staticEmail" class="col-sm-4 col-form-label">email</label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+                                </div>
+                            </div>
+                            <p><input type="submit" value="submit" /></p>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="h-100 p-5 bg-light rounded-3">
+                        <h2>Loaded pdf</h2>
+                        <p>...</p>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="pt-3 mt-4 text-muted border-top">
+                Mizuho Bank &copy; 2021
+            </footer>
+        </div>
+    </main>
+
+    <script src="{{url_for('aml.static', filename='js/bootstrap.bundle.min.js')}}"></script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{url_for('aml.static', filename='css/bootstrap.min.css')}}" rel="stylesheet">
+    <title>AML Welcome Page</title>
+</head>
+
+<body>
+    <main>
+        <div class="container py-4">
+            <header class="pb-3 mb-4 border-bottom">
+                <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+                    <span class="fs-4">Mizuho AML System</span>
+                </a>
+            </header>
+
+            <div class="row align-items-md-stretch">
+                <div class="col-md-12">
+                    <table class="table table-dark">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Unique ID</th>
+                                <th scope="col">File Name</th>
+                                <th scope="col">Status</th>
+                                <th scope="col">Operation</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% if db_results %}
+                            {% for file_dict in db_results %}
+                            <tr>
+                                <th scope="row">{{ loop.index }}</th>
+                                <td>{{ file_dict.unique_id }}</td>
+                                <td>{{ file_dict.file_name }}</td>
+                                <td>{{ file_dict.status }}</td>
+                                <td><a href="{{ url_for('aml.start_extraction', unique_id=file_dict.unique_id)
+                                        }}" target="_blank">Link</a></td>
+                            </tr>
+                            {% endfor %}
+                            {% endif %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <footer class="pt-3 mt-4 text-muted border-top">
+                Mizuho Bank &copy; 2021
+            </footer>
+        </div>
+    </main>
+
+    <script src="{{url_for('aml.static', filename='js/bootstrap.bundle.min.js')}}"></script>
+</body>
+
+</html>
